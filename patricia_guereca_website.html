@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stylesheet.css">
+<head>
+
+
+<script type="text/javascript">
+
+function getCookie(firstName) {
+	var name = firstName + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+		
+}
+
+function checkCookie() {
+	var user = getCookie("firstName");
+	if (user != "") {
+		alert("Welcome " + user);	
+	}
+	
+}
+</script>
+
+
+<title>PG Fitness</title>
+<style>
+table, th {
+
+}
+table {
+border-collapse: collapse;
+
+}
+
+
+</style>
+</head>
+<body onload="init();">
+<!--https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed -->
+
+<ul>
+<li><a href="patricia_guereca_website.html">Home</a></li>
+<li><a href="patricia_guereca_form.html">Contact Me</a></li>
+<li><a href="patricia_guereca_images.html" >Images</a></li>
+<li><a href="homepage.html" >Slideshow</a></li>
+<li><a href="patricia_guereca_video.html">Video</a></li>
+</ul>
+<br>
+<div id="wrapper">
+<div class="menu"> 
+<center>
+<canvas id="logoCanvas" width="610" height="110" 
+style="border: 1px solid black">
+</canvas>
+<script>
+var i=0;
+var canvas, rcontext, step, steps = 0, delay = 20;	
+
+
+
+
+function init() {
+
+canvas = document.getElementById("logoCanvas");
+rcontext = canvas.getContext("2d");
+
+gradient=rcontext.createLinearGradient(40,20,110,200);
+gradient.addColorStop(0, "#89a0c4");
+gradient.addColorStop(.55, "#89c495");
+gradient.addColorStop(1, "#c48989");
+rcontext.shadowColor = "white";
+rcontext.shadowOffsetX = 5;
+rcontext.shadowOffsetY = 5;
+rcontext.shadowBlur = 7;
+rcontext.font = "50px Times New Roman";
+rcontext.fillStyle=gradient;
+rcontext.fillRect(0,0,610,120);
+
+rcontext.fillStyle="#5b5b5b";
+rcontext.textBaseline = 'alphabetic';
+step = 0;
+steps = canvas.width + 50;
+
+
+
+rcontext.scale(1,1);
+
+
+RunTextLeftToRight();
+var img = new Image();
+img.src = "flower.png";
+img.onload = function () {
+	rcontext.drawImage(img, -180, -90);
+	};
+	
+	
+	
+	function fillShapes()
+{
+   var canvas=document.getElementById("myCanvas");
+   var rcontext=canvas.getContext("2d");
+   var ourImage = new Image();
+   ourImage.src = "flower.jpg";
+   var pattern=context.createPattern(ourImage,"no-repeat");
+   rcontext.fillStyle=pattern;rcontext.fillRect(0,0,1,1);
+   if (i<400) 
+   { 
+       rcontext.fillRect(0,0,i,i);
+       ++i; 
+       setTimeout(function() {fillShapes();},5);
+   };
+
+};
+
+rcontext.fillText("PG FITNESS",220,60);
+
+}
+function RunTextLeftToRight() {
+	step++;
+	rcontext.rect(250,30, 400, canvas.width, canvas.height);
+	rcontext.save();
+	rcontext.translate(step, canvas.height / 2);
+	rcontext.fillText("______",250,30);
+	rcontext.restore();
+	if (step == steps)
+		step = 4;
+	if (step < steps)
+		var t = setTimeout('RunTextLeftToRight()', delay);	
+};
+
+</script></center></div>
+	
+<div class="rightcolumn">
+<p class="font">Hello, welcome to my fitness page.</p>
+<p>
+You can find tips that have helped me be fit.
+Click on the icons below to view some of my favorite platforms.
+Through social media and <a href="http://www.bodybuilding.com/" target="_blank">other websites</a> 
+I have learned so much about fitness.
+For example, I watch a lot of <a href="https://www.youtube.com/user/nikkiblackketter" target="_blank">Youtube</a>
+videos that teach me how to perform exercises correctly. I also enjoy reading through 
+<a href="https://www.theskinnyconfidential.com/" target="_blank">blogs</a> 
+that help me achieve my goals of staying fit and healthy.</p>
+<p>Fill <a href="patricia_guereca_form.html">this</a> out to get in contact with me.
+Let's start your fitness journey together!</p>
+<br>
+
+<center class="social">
+<a href="https://twitter.com/stevecook" target="_blank">
+<img src="twitterlogo.png" height="40" width="40" alt="twitter logo"></a>
+<a href="https://www.instagram.com/katyhearnvideos/" target="_blank">
+<img src="insta.png" height="45" width="45" alt="instagram logo"></a>
+<a href="https://www.pinterest.com/FitnessHacks101/fitness-workouts/" target="_blank">
+<img src="pinterest.png" height="40" width="40" alt="pinterest logo"></a></center>
+</div>
+<div class="leftcolumn">
+      <table class="hover">
+      <tr>
+         <th><a href="" target="_blank">
+         <figure><a href="https://www.bodybuilding.com/content/30-min-upper-body-workout-for-women.html"
+          target="_blank"><img src="upperbody.jpg" alt="lifting the bar" class="image"></a></figure></th>
+         <th><a href="http://www.bodybuilding.com/" target="_blank">
+         <figure><img src="BB.png" height="250" width="300" alt="body building logo" class="image"></a></figure></th>
+
+      </tr>
+      <tr>
+          <th><figure><img src="motivation.jpg" alt="picture of me working out" class="image"></a></figure></th>
+          <th><a href="https://www.youtube.com/user/nikkiblackketter" target="_blank">
+          <figure><img src="YouTubelogo.png" height="200" width="300" alt="youtube logo" class="image"></a></figure></th>
+          
+      </tr>
+      </table>
+      </table>
+</div>
+	<div class="footer">
+<script type="text/javascript">
+document.write("Last Updated: " + document.lastModified + ". ");
+</script> <br>
+<script type="text/javascript">
+var now = new Date();
+var hrs = now.getHours();
+var msg = "";
+if (hrs > 6) msg = "Good Morning! ";
+if (hrs > 12) msg = "Good Afternoon! ";
+if (hrs > 17) msg = "Good Evening! ";
+
+document.write(msg);
+
+</script>
+<script type="text/javascript">
+var currentDate = new Date()
+document.write(new Date().getFullYear());
+</script> &copy;
+
+	</div>
+	</div>
+</div>
+</body>
+</html>

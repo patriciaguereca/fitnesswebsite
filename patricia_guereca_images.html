@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stylesheet.css">
+<head>
+<title>PG Fitness</title>
+<script type="text/javascript">
+
+
+</script>
+<style>
+input:invalid{border: 2px solid red;
+
+}
+
+.leftcolumn {
+width: 300px;
+    height: 350px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 5px 5px 10px #e6e6e6;
+    cursor: default;
+    background: #fff url() no-repeat center center
+}
+
+.leftcolumn .mask, .view .content {
+    width: 320px;
+    height: 370px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.leftcolumn img {
+    display: block;
+    position: relative
+}
+.leftcolumn h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.leftcolumn p {
+font-family: "Times New Roman", Times, serif;
+ color: #353535;    
+    
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.leftcolumn a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.leftcolumn a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+.view-first img { 
+    transition: all 0.2s linear;
+}
+.view-first .mask {
+    opacity: 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    transition: all 0.7s ease-in-out;
+}
+.view-first h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.view-first p { 
+    transform: translateY(100px);
+    opacity: 0;
+	transition: all 0.2s linear;
+}
+.view-first a.info{
+    opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+.view-first:hover img { 
+	transform: scale(1.1);
+} 
+.view-first:hover .mask { 
+	opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view-first:hover p {
+    transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+    transition-delay: 0.2s;
+}
+
+
+</style>
+</head>
+<body>
+<ul>
+<li><a href="patricia_guereca_website.html">Home</a></li>
+<li><a href="patricia_guereca_form.html">Contact Me</a></li>
+<li><a href="patricia_guereca_images.html" >Images</a></li>
+<li><a href="homepage.html" >Slideshow</a></li>
+<li><a href="patricia_guereca_video.html">Video</a></li>
+
+</ul>
+<br>
+<div id="wrapper">
+<div class="menu">
+<center><a href="patricia_guereca_website.html">
+<img src="namelogo1.png" alt="pg fitness header"></a></center></div>
+	
+<div class="rightcolumn">
+<center><img src="Checklist.png" 
+alt="perfect form tips" style="width:300px;height:450px;"></center>
+</div>
+<div class="leftcolumn view-first">
+<img src="deadlift.jpg" alt="deadlift position"/>
+<div class="mask">
+<h2>Deadlift</h2>
+<p>This is the starting point of a deadlift. You have to make 
+sure you keep your back straight and you are lifting off with your feet.</p>
+<a href="#" class="info">Read more</a></div>
+
+</div>
+
+<div class="leftcolumn view-first">
+<img src="display.jpg" alt="dumbbell row"/>
+<div class="mask">
+<h2>Dumbbell Row</h2>
+<p>I am performing a row with a dumbbell. This is helping my back get stronger.
+One can go pretty heavy on these. Pull using your back and concentrate on 
+keeping your elbow/arm close to your body.</p>
+<a href="#" class="info">Read more</a></div>
+
+</div>
+<br>
+<div class="leftcolumn view-first">
+<img src="display2.jpg" alt="bent over pull"/>
+<div class="mask">
+<h2>Bent single stretch pull</h2>
+<p>This exercise is being performed using the cable
+machine. Adjust the machine to have it about best width. 
+Then with a pulley attachment, you bend over (with a straight back) 
+and pull the weight using your lat. Your arm should be close to your body. </p>
+<a href="#" class="info">Read more</a></div>
+
+</div>
+
+<div class="leftcolumn view-first">
+<img src="display3.JPG" alt="dumbbell curl"/>
+<div class="mask">
+<h2>Dumbbell Curls</h2>
+<p>This exercise is being performed using the cable
+machine. Adjust the machine to have it about best width. 
+Then with a pulley attachment, you bend over (with a straight back) 
+and pull the weight using your lat. Your arm should be close to your body. </p>
+<a href="#" class="info">Read more</a></div>
+
+</div>
+	<div class="footer">
+<script type="text/javascript">
+document.write("Last Updated: " + document.lastModified + ". ");
+</script> <br>
+<script type="text/javascript">
+var now = new Date();
+var hrs = now.getHours();
+var msg = "";
+if (hrs > 6) msg = "Good Morning! ";
+if (hrs > 12) msg = "Good Afternoon! ";
+if (hrs > 17) msg = "Good Evening! ";
+
+document.write(msg);
+
+</script>
+<script type="text/javascript">
+var currentDate = new Date()
+document.write(new Date().getFullYear());
+</script> &copy;
+
+	</div>
+	</div>
+</div>
+</body>
+</html>

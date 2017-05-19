@@ -1,0 +1,14 @@
+I used border radius to make a rounded corner box around social media icons
+I used border image on the footer, to make a background border with an image
+I used border-shadow to get a shadow around the wrapper/website
+Text shadow is on the footer text
+On the form page I added multiple backgrounds, one is the gray background and the other one is a backgrounnd image a person.
+I used a gradiant background on the header of my pages.
+In the images page I created a lightbox, using hover effects over my images and
+adding explanations to them. Using 4 images.  
+In my main page I added a free font , "Hello, welcome to my fitness page."
+I made a start page, where I used the full screen background image slide show, then I added a start button that takes us to the main navigational page. 
+For the lightbox, in the images page I used the hover effect on each image to add a title and extra details about the image. 
+I added a menu transition on the home page.
+For the 2d transform, If you hover over the work hard image in the form page, it moves to the side.
+For my one more advanced css3 feature I decided to add a background video. It is the video page.

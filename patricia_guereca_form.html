@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stylesheet.css">
+<head>
+<title>PG Fitness</title>
+<script type="text/javascript">
+function checkForm()
+{
+	var theirName=document.form.firstName.value;
+	var theirAge=document.form.age.value;
+	if (theirName=="")
+	{
+	alert("You must fill in the name box");
+	return false;
+	}
+	if (theirAge=="" || theirAge<18)
+	{
+	alert("You must provide an age that is greater than 18!");	
+	return false;
+	}
+
+}
+
+function setCookie(firstName) {
+	document.cookie = firstName;
+}
+
+
+function allowDrop(event) {
+	event.preventDefault();
+}
+
+function drag(event) {
+	event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event) {
+	event.preventDefault();
+	var data=event.dataTransfer.getData("text");
+	event.target.appendChild(document.getElementById(data));
+}
+function dropCheck(event)
+	{event.preventDefault();
+	var data = event.dataTransfer.getData("text");
+	event.target.appendChild(document.getElementById(data));
+	if (data=="telephone") {
+		alert("Thanks for contacting us. We will call you within 24 hours. Thanks for your feedback!");
+	}
+	else if (data=="computer") {
+		alert("Thanks for contacting us. We will email you within 24 hours. Thanks for your feedback!");
+	}
+	else if (data=="envelope") {
+		alert("Thanks for contacting us. We will mail you within 24 hours. Thanks for your feedback!");
+	}
+	else {
+		alert("please drag a choice in the box!");
+	}
+	
+	
+	}
+	
+function handleDragEnter(event) {
+	document.getElementById("dropit").classList.add("over");
+}
+function handleDragLeave(event) {
+	document.getElementById("dropit").classList.remove("over");
+}
+</script>
+<style>
+p {
+color: #333;
+font-weight: 500;
+}
+textarea,
+input {
+width: 50%;
+padding: .5em;
+margin: 0;
+font-weight: 400;
+font-size: 1rem;
+color: #333;
+border: none;
+margin-top: 1em;
+margin: auto;
+position: relative;
+left: 40px;
+}
+input:invalid{border: 2px solid red;
+
+}
+
+.matrix:hover {
+  transform:matrix(0.586,0.8,-0.8,0.586,40,40);
+  transition: all 1s ease;
+}
+
+
+
+
+.contactMe {
+	width: 100px;
+	height: 90px;
+	background: transparent;
+	border-style: solid;
+	border-color: #2ba039;
+}
+#food .leftcolumn {
+	white-space: nowrap;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><a href="patricia_guereca_website.html">Home</a></li>
+<li><a href="patricia_guereca_form.html">Contact Me</a></li>
+<li><a href="patricia_guereca_images.html" >Images</a></li>
+<li><a href="homepage.html" >Slideshow</a></li>
+<li><a href="patricia_guereca_video.html">Video</a></li>
+</ul>
+<br>
+<div id="wrapper">
+<div class="menu">
+<center><a href="patricia_guereca_website.html">
+<img src="namelogo1.png" alt="pg fitness header"></a></center></div>
+	
+<div class="rightcolumn">
+
+<center>
+<img class="matrix" src="websiteimage.jpg" alt="pretty lights" style="width:300px;height:400px;">
+</center>
+</div>
+<div id="form" class="leftcolumn">
+<div id="dropit" class="contactMe" ondragover="allowDrop(event)" ondrop="dropCheck(event)"
+ondragenter="handleDragEnter(event)" ondragleave="handleDragLeave(event)">
+
+</div>
+<p>Drag and drop will happen here.</p>
+<div class="telephonediv" ondragover="allowDrop(event)" ondrop="drop(event)">
+<img src="telephone.png" draggable="true" width="60" height="60" 
+alt="telephone" id="telephone" ondragstart="drag(event)">
+</div>
+<div class="computerdiv" ondragover="allowDrop(event)" ondrop="drop(event)">
+<img src="computer.png" draggable="true" width="60" height="60" 
+alt="computer" id="computer" ondragstart="drag(event)">
+</div>
+<div class="envelopediv" ondragover="allowDrop(event)" ondrop="drop(event)">
+<img src="Envelope.png" draggable="true" width="60" height="60" 
+alt="envelope" id="envelope" ondragstart="drag(event)">
+</div>
+
+
+
+<br>
+<center>Fill out the form below so we can keep in touch!</center>
+<br>
+<form id="form" name="form" method="post" 
+action="mailto:patricia.guereca@go.tarleton.edu" onSubmit="return checkForm();">
+
+<input type="text" name="firstName" id="firstName" placeholder="First Name" autofocus="" />
+
+<input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+
+<input type="number" name="age" id="age" required placeholder="Age" />
+
+<input type="email" name="email" id="email" 
+placeholder="example@gmail.com" patter="[a-z0-9._%=-]+@[a-z0-9.-]+\.[a-z]{3,2}$"/>
+
+
+<input type="url" name="url" id="url" placeholder="https://www.example.com"/>
+
+<input type="date" name="date" />
+<textarea name="comment" id="comment" placeholder="comments"></textarea>
+<input type="submit" name="Button" id="submit" value="Submit"/>
+<input type="reset">
+</form>
+</div>
+	<div class="footer">
+<script type="text/javascript">
+document.write("Last Updated: " + document.lastModified + ". ");
+</script> <br>
+<script type="text/javascript">
+var now = new Date();
+var hrs = now.getHours();
+var msg = "";
+if (hrs > 6) msg = "Good Morning! ";
+if (hrs > 12) msg = "Good Afternoon! ";
+if (hrs > 17) msg = "Good Evening! ";
+
+document.write(msg);
+
+</script>
+<script type="text/javascript">
+var currentDate = new Date()
+document.write(new Date().getFullYear());
+</script> &copy;
+
+	</div>
+</div>
+	</div>
+</div>
+</body>
+</html>

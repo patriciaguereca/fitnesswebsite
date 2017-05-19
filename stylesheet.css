@@ -1,0 +1,86 @@
+@font-face {
+font-family: 'myFont';
+src: url('./Milkshake.ttf') format('truetype');
+}
+.rightcolumn p.font {
+font-family: myFont;
+font-size: 170%;
+text-align: center;
+color: gray;
+}
+p {
+ font-family: "Times New Roman", Times, serif;
+ line-height: 195%;
+ color: #353535;
+}
+#wrapper {position: static;
+			margin: 30px;
+			background-color: white; padding-top: 2px;
+			box-shadow: 3px 3px 15px #5e5e5e
+			}
+.menu {background-color: #A6ACAF;
+background-image: url(gradient.png);
+		font-size: 30px;}
+.rightcolumn {background-color: white;
+float: right; width: 540px; padding: 10px 10px;
+border-left-style: solid; border-left-color: #304800; 
+border-left-width: 10px;
+}
+.rightcolumn center.social{
+border: 1px solid black;
+border-radius: 3px;
+}
+	
+.leftcolumn {background-color: white; float: left; width: 850px; padding: 10px 10px; }
+.footer {padding: 10px 10px; clear: both;
+border-top: thin solid black; background-color: white;
+background-size: 80px; text-align: center; color: black; 
+text-shadow: 1px 1px gray;
+ border: 35px solid transparent;
+ padding: 10px;
+ border-image: url(texture.jpg) round;
+ border-image-slice: 40;
+ 
+ 
+ font-family: "Times New Roman", Times, serif;
+ color: #353535;
+}
+#form.leftcolumn {
+background: url(deadlift.png) right bottom no-repeat,
+url(marble.jpg);
+padding: 15px;
+
+
+}
+
+ul {list-style-type: none;
+margin: 0; padding: 0; overflow: hidden;
+background-color: white; position: absolute;
+top: 0; width: 100%;
+}
+li {float: left;
+}
+li a {display: block; color: #D7BDE2;
+padding: 16px; text-decoration: none;
+}
+
+li a:hover:not(.active){background-color: #A6ACAF;
+}
+.active {background-color: pink;
+}
+body {margin: 0;}
+
+.hover figure img {
+opacity: 1;
+transition: .5s ease-in-out;
+}
+.hover figure:hover img {
+opacity: .3;
+}
+
+#container {
+width: 450px;
+height: 400px;
+z-index: 1;
+
+}
